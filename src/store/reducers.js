@@ -1,5 +1,5 @@
 import * as actions from './actions';
-import { combineReducers } from 'redux';
+
 
 // nous avons un state de cette forme
 //  {
@@ -12,7 +12,7 @@ import { combineReducers } from 'redux';
 //    done: true
 //  }
 
-const todos = (state = [], action) => {
+export const todos = (state = [], action) => {
     switch(action.type) {
         case actions.ADD_TODO : {
             return {
@@ -38,7 +38,7 @@ const todos = (state = [], action) => {
     }
 }
 
-const filter = (state = actions.visibilityFilters.SHOW_ALL, action) => {
+export const filter = (state = actions.visibilityFilters.SHOW_ALL, action) => {
     switch(action.type) {
         case actions.SET_FILTER : {
             return action.filter
@@ -50,7 +50,3 @@ const filter = (state = actions.visibilityFilters.SHOW_ALL, action) => {
     }
 }
 
-// c'est uniquement todosReducer qui sera récupéré par le store et il comprend l'intégralité des différents effets
-// des différentes actions
-
-export const todosReducer = combineReducers({ todos, filter}) 
