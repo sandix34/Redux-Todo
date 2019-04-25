@@ -15,13 +15,10 @@ import * as actions from './actions';
 export const todos = (state = [], action) => {
     switch(action.type) {
         case actions.ADD_TODO : {
-            return {
-                todos: [ ...state.todos, action.todo ]//copie tous les éléments du state.todos et ajout todo
-            }
+            return  [ ...state, action.todo ]//copie tous les éléments du state.todos et ajout todo    
         }
         case actions.DELETE_TODO : {
-            return state.filter( (t, i) => i !== action.index )
-            
+            return state.filter( (t, i) => i !== action.index )    
         }
         case actions.TOGGLE_TODO : {
             return state.map( (t, i) => {

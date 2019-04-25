@@ -1,12 +1,15 @@
 import React from 'react';
 
-const TodoItem = ({todo}) => {
+const TodoItem = ({todo, toggleTodo, deleteTodo}) => {
     return (
-        <li className="list-group-item d-flex flex-row justify-content-between align-items-center list-group-item-action ">
+        <li onClick={ toggleTodo } className="list-group-item d-flex flex-row justify-content-between align-items-center list-group-item-action ">
         <span>{ todo.name }</span>
             <span>
-                <input type="checkbox" className="mx-3"/>
-                <button className="btn btn-sm btn-danger">delete</button>
+                <input type="checkbox" checked={ todo.done } onChange={ () => {} } className="mx-3"/>
+                <button onClick={ (e) => {
+                    e.stopPropagation();
+                    deleteTodo()
+                } } className="btn btn-sm btn-danger">delete</button>
             </span>
         </li>
     )
