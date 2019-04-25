@@ -20,9 +20,8 @@ const todos = (state = [], action) => {
             }
         }
         case actions.DELETE_TODO : {
-            return {
-               state.filter( (t, i) => i !== action.index )
-            }
+            return state.filter( (t, i) => i !== action.index )
+            
         }
         case actions.TOGGLE_TODO : {
             return state.map( (t, i) => {
