@@ -1,3 +1,16 @@
+### Cet exemple d'application basique a été réalisé dans le cadre de la formation e-learning Redux-les bases  proposé par [Dyma](https://dyma.fr/)  :fr:
+
+## Présentation du projet
+
+L'objectif est de créer une liste todo en utilisant : 
+
+- [Bootstrap](https://getbootstrap.com/)
+- [Redux](https://redux.js.org/)
+- [React-Redux](https://react-redux.js.org/)
+
+![demoTodo](https://user-images.githubusercontent.com/44428775/56747706-c038d100-677e-11e9-853c-09b0e174b224.gif)
+
+
 Ce projet a été démarré avec [Create React App](https://github.com/facebook/create-react-app).
 
 ## Scripts disponibles
