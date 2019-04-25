@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div className="container p-5" >
         <h4>Ajouter une todo</h4>
-        <hr clasName="my-4"/>
+        <hr className="my-4"/>
         <AddTodo/>
         <hr className="my-4"/>
         <div className="card">

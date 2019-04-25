@@ -2,9 +2,9 @@ import React from 'react';
 
 const AddTodo = (props) => {
     return (
-        <div ClassName="d-flex mb-4">
+        <div className="d-flex mb-4">
           <input type="text" className="form-control mr-5"/>
-          <button className="btn btn-success m-1">Ajouter</button>
+          <button className="btn btn-success">Ajouter</button>
         </div>
     )
 }
