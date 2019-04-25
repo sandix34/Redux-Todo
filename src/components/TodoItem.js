@@ -2,7 +2,7 @@ import React from 'react';
 
 const TodoItem = (props) => {
     return (
-        <li className="list-group-item d-flex flex-row justify-content-between align-items-center ">
+        <li className="list-group-item d-flex flex-row justify-content-between align-items-center list-group-item-action ">
         <span>x</span>
             <span>
                 <input type="checkbox" className="mx-3"/>
