@@ -12,21 +12,22 @@ const TodoList = ({todos}) => {
     )
 }
 
-export default connect((state) => {
+export default connect(state => {
     const filter = state.filter;
     let todos;
     switch(filter) {
-        
-        case visibilityFilters.SHOW_DONE : {
-            todos = state.todos.filter( t => t.done)
-        }
-        case visibilityFilters.SHOW_Active : {
-            todos = state.todos.filter( t => !t.done)
-        }
-        default: todos = state.todos
+      case VisibilityFilters.SHOW_DONE: {
+        todos = state.todos.filter( t => t.done )
+        break;
+      }
+      case VisibilityFilters.SHOW_ACTIVE: {
+        todos = state.todos.filter( t => !t.done )
+        break;
+      }
+      default: {
+        todos = state.todos
+        break;
+      }
     }
-
-    return {
-        todos
-    }
-})(TodoList);
+    return {todos};
+  })(TodoList);
